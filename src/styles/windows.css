@@ -1,0 +1,145 @@
+/* Windows XP Styles */
+.windows-popup {
+    @apply bg-gray-100 border-2 border-gray-300 rounded shadow-xl;
+    animation: windowsPop 0.3s ease-out;
+  }
+  
+  .windows-title-bar {
+    @apply bg-gradient-to-r from-[#0058AE] to-[#3A6EA5] px-3 py-1 flex items-center justify-between text-white;
+  }
+  
+  .close-button {
+    @apply hover:bg-red-500 px-2 rounded;
+  }
+  
+  .stats-box {
+    @apply border-2 border-gray-300 p-4 bg-gray-50 rounded;
+  }
+  
+  .task-item {
+    @apply flex items-center space-x-2 bg-blue-600 bg-opacity-50 px-3 py-1 rounded-sm text-white text-sm;
+  }
+  
+  .start-button {
+    @apply bg-green-600 hover:bg-green-700 transition-colors;
+  }
+  
+  @keyframes windowsPop {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+/* styles/globals.css */
+@keyframes glitch {
+    0% {
+      text-shadow: 3px 0 #ff00ff, -3px 0 #00ffff;
+      transform: translate(0);
+    }
+    20% {
+      text-shadow: 3px 0 #00ffff, -3px 0 #ff00ff;
+      transform: translate(5px, 5px);
+    }
+    40% {
+      text-shadow: -3px 0 #ff00ff, 3px 0 #00ffff;
+      transform: translate(-5px, -5px);
+    }
+    60% {
+      text-shadow: 3px 0 #00ffff, -3px 0 #ff00ff;
+      transform: translate(5px, -5px);
+    }
+    80% {
+      text-shadow: -3px 0 #ff00ff, 3px 0 #00ffff;
+      transform: translate(-5px, 5px);
+    }
+    100% {
+      text-shadow: 3px 0 #ff00ff, -3px 0 #00ffff;
+      transform: translate(0);
+    }
+  }
+  
+  .glitch-text:hover {
+    animation: glitch 0.5s infinite;
+  }
+
+
+
+  /* styles/windows-xp.css */
+/* Classic Windows XP button styles */
+.windows-button {
+    @apply px-2 py-0.5 text-sm font-bold 
+      bg-[#ECE9D8] border border-gray-400 
+      hover:bg-gray-200 active:bg-gray-300 
+      focus:outline-none transition-colors;
+  }
+  
+  .window-handle {
+    touch-action: none;
+  }
+  
+  /* Windows XP shadow effects */
+  .windows-shadow {
+    box-shadow: 
+      inset 1px 1px 0px rgba(255,255,255,0.8),
+      inset -1px -1px 0px rgba(0,0,0,0.1);
+  }
+  
+  .animate-bounce-subtle {
+    animation: bounce-subtle 2s infinite;
+  }
+  
+  @keyframes bounce-subtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Add cursor trail effect */
+  .cursor-trail {
+    pointer-events: none;
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 84, 227, 0.5);
+    border-radius: 50%;
+    transition: 0.1s;
+  }
+
+
+  /* Y2K Gradient Text */
+.y2k-text {
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Retro Window Effects */
+  .retro-window {
+    box-shadow: 
+      3px 3px 0 rgba(0,0,0,0.2),
+      inset 2px 2px 0 rgba(255,255,255,0.2);
+  }
+  
+  /* CRT Scan Effect */
+  .crt-scan::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255,255,255,0.1);
+    animation: scan 8s linear infinite;
+  }
+  
+  @keyframes scan {
+    0% { top: 0 }
+    100% { top: 100% }
+  }
+
+
+
